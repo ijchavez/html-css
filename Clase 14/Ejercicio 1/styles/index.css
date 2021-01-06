@@ -1,0 +1,65 @@
+.inicial{
+    /*El alto importa el numero el largo le ponemos el completo de la pantalla*/
+    height: 700px;
+    width: 500px;
+    background-color: purple;
+    border-left: 8px solid rgb(241, 176, 241);
+    font-family: 'Mulish', sans-serif;
+    font-size: 17px;
+    color: rgb(241, 176, 241);
+    display:flex;
+    box-shadow: 0px 0px 10px 0px black;
+    justify-content: space-around;
+    /*Espacio entre los objetos*/
+    padding: 10px 20px;
+    /*para que no se vaya del width por la sumatoria del tamaño, padding, margin, etc*/
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items:flex-start;
+    margin: 10px;
+}
+
+.titu{
+    font-family: 'Mulish', sans-serif;
+    font-weight: bolder;
+
+}
+.nomape{
+    width: 450px;
+    height:25px;
+
+}
+.desc{
+    width: 450px;
+    height:160px;
+
+}
+.bdiv{
+
+    display:flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+    color: purple;
+}
+.butt{
+    font-family: 'Mulish', sans-serif;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(241, 176, 241);
+    width: auto;
+    height:auto;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: purple;
+    margin-left: 350px;
+}
+
+.cajas{
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    color: purple;
+    
+}

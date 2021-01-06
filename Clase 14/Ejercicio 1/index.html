@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Ejercicio 1/styles/index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
+    </style>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600;800&display=swap');
+    </style>
+</head>
+<body>
+    <form>
+        <div class="inicial">
+            
+                <h1 class="titu">Formulario</h1>
+                
+                <label for="tipodni">Tipo de Documento</label>
+                <div>
+
+                    <select class="nomape cajas" name="tipodni" id="tipodni">
+                        <option value="lc">Libreta Civica</option>
+                        <option value="dl">DNI Libreta</option>
+                        <option value="dt">DNI Tarjeta</option>
+                    </select>
+                </div>
+                <label for="first_name">Nombre: </label>
+                <div>
+
+                    <input 
+                        type="text" 
+                        id="first_name" 
+                        name="first_name" 
+                        placeholder="Ingresa tu nombre"
+                        class = "cajas nomape"
+                    
+                    >
+                </div>
+                <label for="last_name">Apellido: </label>
+                <div>
+
+                    <input 
+                        type="text" 
+                        id="last_name" 
+                        name="last_name" 
+                        placeholder="Ingresa tu apellido"
+                        class = "cajas nomape"
+                    
+                    >
+                </div>
+            
+                <label for="genero">Genero: </label>
+                <div>
+
+                    <label for="male">Masculino</label>
+                    <input type="radio" id="male" name="genero">
+                    <label for="female">Femenino</label>
+                    <input type="radio" id="female" name="genero">   
+                </div>
+                <label for="jobd">Descripcion: </label>
+                <div>
+                    <textarea class = "desc cajas" name="jobd" id="jobd" cols="30" rows="10"></textarea>
+                </div>
+ 
+
+
+            <div class="bdiv">    
+                <button class="butt" type="submit">Cargar Información</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

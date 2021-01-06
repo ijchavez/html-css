@@ -1,0 +1,15 @@
+/* Etiqueta */
+h1{
+    color: red;
+
+}
+/* ID */
+#titulo{
+    color:red;
+}
+/* Clases */
+
+.titulo {
+    color:red;
+    
+}
