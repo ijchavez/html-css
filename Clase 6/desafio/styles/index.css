@@ -1,0 +1,31 @@
+.parrafo {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 90px;
+    text-align: center;
+    font-family: 'Langar', cursive;
+    color:plum;
+    background-color: blue;
+}
+.caja{
+    background-color: plum;
+    width: 300px;
+    height: 300px;
+}
+.imagen{
+    background-image: 
+      url("https://www.rocketcode.com.ar/assets/logo/full_logo.svg");
+    width: 900px;
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    
+
+}
+.cuenta{
+    background-image: url("../CuentaCloudCraft.png");
+    width: 730px;
+    height: 361px;
+    background-position: center center;
+    background-size: cover;
+}

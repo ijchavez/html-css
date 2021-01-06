@@ -1,0 +1,19 @@
+.title-wrapper{
+    color: black;
+    background-color: bisque;
+    width: 400px;
+    font-weight: bold;
+}
+.subtitle-wrapper{
+    color: white;
+    background-color: darkgray;
+    width: 300px;
+    font-weight: bold;
+}
+.span{
+    color: chocolate;
+}
+.parrafo{
+    text-align: left;
+    width: 400px;
+}

@@ -1,0 +1,80 @@
+.inicial{
+    /*El alto importa el numero el largo le ponemos el completo de la pantalla*/
+    height: auto;
+    width: 500px;
+    background-color: blue;
+    border-left: 8px solid skyblue;
+    font-family: 'Mulish', sans-serif;
+    font-size: 17px;
+    color: lightsteelblue;
+    display:flex;
+    box-shadow: 0px 0px 10px 0px black;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    /*Espacio entre los objetos*/
+    padding: 10px 20px;
+    /*para que no se vaya del width por la sumatoria del tamaño, padding, margin, etc*/
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items:center;
+    margin: 10px;
+}
+
+.titu{
+    font-family: 'Mulish', sans-serif;
+    font-weight: bolder;
+
+}
+.nomape{
+    width: 450px;
+    height:25px;
+
+}
+.desc{
+    width: 100px;
+    height:20px;
+    
+
+}
+.bdiv{
+
+    display:flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+    color: lightsteelblue;
+}
+.butt{
+    font-family: 'Mulish', sans-serif;
+    border-radius: 5px;
+    border: none;
+    background-color: darkblue;
+    width: auto;
+    height:auto;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: lightsteelblue;
+    margin-left: 350px;
+}
+
+.cajas{
+    background-color: lightskyblue;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    color: blue;
+    
+}
+.tdni{
+    width: 200px;
+    height:25px;
+}
+.ndni{
+    width: 225px;
+    height: 25px;
+    margin-top: 19px;
+}
+.labo{
+    width: 200px;
+    height:25px;
+}
