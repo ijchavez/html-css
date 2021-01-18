@@ -158,7 +158,6 @@
         <h2 class="title-content">Experiencia</h2>
 
         <div class="experience-container__topics">
-
           <div class="experience-container__topics__card">
             <div class="experience-container__topics__card__data">
               <i class="fas fa-building"></i>
@@ -185,7 +184,8 @@
               <i class="fas fa-building"></i>
               <span class="experience-container__topics__card__data__time">Mar. 2012 - Actualidad</span>
               <h6 class="org">Analista Deploy Sr. - Red Link S.A.</h6>
-              <ul>
+              <input type="checkbox" class="read-more-state" id="post-1" />
+              <ul class="read-more-wrap">
                 <li> Despliegue de aplicaciones en BASE24 (Tandem) en entornos de testing, homologación y
                   preproductivos.</li>
                 <li> Referente de los proyectos relevantes de la compañía y su impacto en el sector.</li>
@@ -198,16 +198,18 @@
                   <li>Integración Continúa</li>
                   <li>Ley de Emergencia</li>
                 </ul>
-                <li> Detección de necesidades internas del sector y sus procesos</li>
-                <li> Mejoras y optimización de aplicaciones internas.</li>
-                <li> Análisis y control de la documentación según la normativa vigente del ciclo de vida de productos.
+                <li class="read-more-target"> Detección de necesidades internas del sector y sus procesos</li>
+                <li class="read-more-target"> Mejoras y optimización de aplicaciones internas.</li>
+                <li class="read-more-target"> Análisis y control de la documentación según la normativa vigente del ciclo de vida de productos.
                 </li>
-                <li> Análisis de scripts de manipulación de datos y de estructura de base de datos que se envían a
+                <li class="read-more-target"> Análisis de scripts de manipulación de datos y de estructura de base de datos que se envían a
                   entornos de prueba, homologación, preproductivos y productivos.</li>
-                <li> Optimización de circuitos.</li>
+                  <li class="read-more-target"> Optimización de circuitos.</li>
               </ul>
-
+              <label for="post-1" class="read-more-trigger"></label>    
             </div>
+          </div>
+          <div class="experience-container__topics__card">
             <div class="experience-container__topics__card__data">
               <i class="fas fa-building"></i>
               <span class="experience-container__topics__card__data__time">Mar. 2010 - Feb. 2012</span>
@@ -220,8 +222,6 @@
 
               </ul>
             </div>
-          </div>
-          <div class="experience-container__topics__card">
             <div class="experience-container__topics__card__data">
               <i class="fas fa-building"></i>
               <span class="experience-container__topics__card__data__time">Nov. 2007 - Feb. 2010</span>
@@ -253,9 +253,7 @@
       </section>
       <section class="skils-container container" id="skils">
         <h2 class="title-content">Estudios</h2>
-
         <div class="skils-container__topics">
-
           <div class="skils-container__topics__card">
             <div class="skils-container__topics__card__data">
               <i class="fas fa-graduation-cap" aria-hidden="true"></i>
@@ -268,17 +266,15 @@
               <i class="fas fa-graduation-cap" aria-hidden="true"></i>
               <span class="skils-container__topics__card__data__time">Mar. 2001 - Dic. 2003. Educación Secundaria</span>
               <h6 class="org">Economia y Gestión de las Organizaciones. Instituto Nuestra Sra. de Guadalupe</h6>
-
             </div>
-
+          </div>
+          <div class="skils-container__topics__card">
             <div class="skils-container__topics__card__data">
               <i class="fas fa-graduation-cap" aria-hidden="true"></i>
               <span class="skils-container__topics__card__data__time">Mar. 1991 - Dic. 2000. Educación Primaria.</span>
               <h6 class="org">Nueva Escuela del Sur</h6>
-
             </div>
           </div>
- 
         </div>
       
       </section>
@@ -287,8 +283,13 @@
         <div class="certif-container__topics">
             <div class="certif-container__topics__card">
               <span class="certif-container__topics__card__data__time">2020</span>
+              <div class= "tit-title">
               <h6 class="org">Open API</h6>
-                <p>Definiendo Microservicios, esquemas, componentes, parametros, solicitudes y
+              <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-489ee5d5-7132-4f4c-8295-d819ccde05d6.jpg?v=1602801297000">
+                <img class="certifimg" src="../Trabajo Final/imagenes/Logos/certificado.svg" alt="certificate">
+              </a>
+              </div>
+                <p>Definiendo microservicios, esquemas, componentes, parámetros, solicitudes y
                   definiciones de seguridad.
                 </p>
                 <div>
@@ -303,118 +304,138 @@
                       </li>
                   </ul>
                 </div>
-                <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-489ee5d5-7132-4f4c-8295-d819ccde05d6.jpg?v=1602801297000">
-                  <img class="certifimg" src="../Trabajo Final/imagenes/Logos/certificado.svg" alt="certificate">
-                </a>
-              
             </div>
               <div class="certif-container__topics__card">
                 <span class="certif-container__topics__card__data__time">2020</span>
-                <h6 class="org">Postman</h6>
-                  <p>Peticiones a la API, Autenticación y autorización, Colecciones, Test y Scripts, Collection Runner,
-                    Integración Postman con Newman y Jenkins.
-                  </p>
-                  
+                <div class ="tit-title">
+                  <h6 class="org">Postman</h6>
                   <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-ce0d6ca1-f867-4407-815c-2f07bc158cbc.jpg?v=1603938133000">
                     <img class="certifimg" src="../Trabajo Final/imagenes/Logos/certificado.svg" alt="certificate">
                   </a>
-                
+                </div>
+                  <p>Peticiones a la API, Autenticación y autorización, C./index.html#me_files/octocat-face.pngolecciones, Test y Scripts, Collection Runner,
+                    Integración Postman con Newman y Jenkins.
+                  </p>
+               
               </div>
-            <div class="certif-container__topics__card">
-              <span class="certif-container__topics__card__data__time">2020</span>
-              <h6 class="org">Docker</h6>
-                <p>Docker Images, Containers, Volumes, Network, Docker Compose, Docker Registry y Docker Station
-                </p>
-                <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-f9520f63-4791-427f-a519-e23e99add651.jpg?v=1608228795000">
-                  <img class="certifimg" src="../Trabajo Final/imagenes/Logos/certificado.svg" alt="certificate">
-                </a>
-              
-            </div>
-
         </div>
         <div class="certif-container__topics">
           <div class="certif-container__topics__card">
+            <span class="certif-container__topics__card__data__time">2020</span>
+            <div class = "tit-title">
+              <h6 class="org">Docker</h6>
+              <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-f9520f63-4791-427f-a519-e23e99add651.jpg?v=1608228795000">
+                <img class="certifimg" src="../Trabajo Final/imagenes/Logos/certificado.svg" alt="certificate">
+              </a>
+            </div>
+              <li>Docker Images</li>
+              <li>Containers</li>
+              <li>Volumes</li>
+              <li>Network</li>
+              <li>Docker Compose</li>
+              <li>Docker Registry</li>
+              <li>Docker Station</li>
+          </div>  
+          <div class="certif-container__topics__card">
             <span class="certif-container__topics__card__data__time">En curso - 2021</span>
-            <h6 class="org">
-              DevOps. Universidad Nacional de Córdoba. 
-              <a class= "certif-links" href="http://mundose.com">Mundos E</a>
-            
-            </h6>
-            <ul>
+            <div class ="tit-title">
+              <h6 class="org">
+                DevOps. Universidad Nacional de Córdoba. 
+                <a class= "certif-links" href="http://mundose.com">Mundos E</a>
+              
+              </h6>
+              <a href="">
+                <img class="certifwip" src="../Trabajo Final/imagenes/Logos/WIP.png" alt="certificate">
+              </a>
+            </div>
+            <input type="checkbox" class="read-more-state" id="post-2" />
+
+            <ul class="read-more-wrap">
               <li>Kanban</li>
               <li>Scrum</li>
               <li>Software Architecture</li>
               <li>Construcción de equipos</li>
               <li>Calidad</li>
               <li>Infraestructura como código</li>
-              <li>Networking. AWS, Lunux - Centos</li>
-              <li>Neurociencia. Inteligencia Emocional</li>
-              <li>GIT - GITHUB</li>
-              <li>API Manager</li>
-              <li>Frontend</li>
-              <li>Backend</li>
-              <li>Dataend</li>
-              <li>Docker, Kubernetes, Jenkins</li>
-              <li>CI - CD</li>
-              <li>Pipeline</li>
-                <ul>
-                  <li>Frontend</li>
-                  <li>Backend</li>
-                  <li>Dataend</li>
+              <li class="read-more-target">Networking. AWS, Lunux - Centos</li>
+              <li class="read-more-target">Neurociencia. Inteligencia Emocional</li>
+              <li class="read-more-target">GIT - GITHUB</li>
+              <li class="read-more-target">API Manager</li>
+              <li class="read-more-target">Frontend</li>
+              <li class="read-more-target">Backend</li>
+              <li class="read-more-target">Dataend</li>
+              <li class="read-more-target">Docker, Kubernetes, Jenkins</li>
+              <li class="read-more-target">CI - CD</li>
+              <li class="read-more-target">Pipeline</li>
+                <ul class="read-more-wrap">
+                  <li class="read-more-target">Frontend</li>
+                  <li class="read-more-target">Backend</li>
+                  <li class="read-more-target">Dataend</li>
                 </ul>
-                <li>Telemetría</li>
-                <ul>
-                  <li>Frontend</li>
-                  <li>Backend</li>
-                  <li>Dataend</li>
-                  <li>Del negocio</li>
-                  <li>De la infraestructura</li>
+                <li class="read-more-target">Telemetría</li>
+                <ul class="read-more-wrap">
+                  <li class="read-more-target">Frontend</li>
+                  <li class="read-more-target">Backend</li>
+                  <li class="read-more-target">Dataend</li>
+                  <li class="read-more-target">Del negocio</li>
+                  <li class="read-more-target">De la infraestructura</li>
                 </ul>  
-              <li>Operations</li>
-              <li>Continuous Improvment</li>
+              <li class="read-more-target">Operations</li>
+              <li class="read-more-target">Continuous Improvment</li>
             </ul>
-            <a href="">
-              <img class="certifwip" src="../Trabajo Final/imagenes/Logos/WIP.png" alt="certificate">
-            </a>
-            
-          </div>
-            <div class="certif-container__topics__card">
-              <span class="certif-container__topics__card__data__time">En curso - 2021</span>
+            <label for="post-2" class="read-more-trigger"></label>           
+          </div>          
+        </div>
+        <div class="certif-container__topics">
+          <div class="certif-container__topics__card">
+            <span class="certif-container__topics__card__data__time">En curso - 2021</span>
+            <div class= "tit-title">
               <h6 class="org">
                 Selenium - Java. Nivel Básico.
                 <a class= "certif-links" href="http://www.seleniumacademy.net/">Selenium Academy</a>
                 
               </h6>
-                <p>Java</p>
-                <ul>
-                  <li>Estructuras de bucle</li>
-                  <li>Métodos</li>
-                  <li>Listas y Arreglos</li>
-                  <li>Objetos y Clases</li>
-                  <li>Herencia y Polimorfismo</li>
-                  <li>Refactoring</li>
-                </ul>
-                <p>Selenium</p>
-                <ul>
-                  <li>Localizadores</li>
-                  <li>XPath y CSS Selector</li>
-                  <li>TestNG</li>
-                  <li>Waits</li>
-                  <li>Data Providers, Test Groups, Generación de datos dinámicos</li>
-                  <li>Iframes, Patron Page Object</li>
-                  <li>Refactoring y Herencia en Selenium</li>
-                </ul>               
-                <a href="">
-                  <img class="certifwip" src="../Trabajo Final/imagenes/Logos/WIP.png" alt="certificate">
-                </a>
-              
+              <a href="">
+                <img class="certifwip" src="../Trabajo Final/imagenes/Logos/WIP.png" alt="certificate">
+              </a>
             </div>
+
+              <p>Java</p>
+              <ul>
+                <li>Estructuras de bucle</li>
+                <li>Métodos</li>
+                <li>Listas y Arreglos</li>
+                <li>Objetos y Clases</li>
+                <li>Herencia y Polimorfismo</li>
+                <li>Refactoring</li>
+              </ul>
+              <input type="checkbox" class="read-more-state" id="post-3" />
+              <p>Selenium</p>
+              <ul class="read-more-wrap">
+                <li class="read-more-target">Localizadores</li>
+                <li class="read-more-target">XPath y CSS Selector</li>
+                <li class="read-more-target">TestNG</li>
+                <li class="read-more-target">Waits</li>
+                <li class="read-more-target">Data Providers, Test Groups, Generación de datos dinámicos</li>
+                <li class="read-more-target">Iframes, Patron Page Object</li>
+                <li class="read-more-target">Refactoring y Herencia en Selenium</li>
+              </ul>
+           
+              <label for="post-3" class="read-more-trigger"></label>  
+          </div>          
           <div class="certif-container__topics__card">
             <span class="certif-container__topics__card__data__time">En curso - 2021</span>
-            <h6 class="org">
-              HTML - CSS. 
-              <a class= "certif-links" href="http://www.rocketcode.com">RocketCode</a>
-            </h6>
+            <div class = "tit-title">
+              <h6 class="org">
+                HTML - CSS. 
+                <a class= "certif-links" href="http://www.rocketcode.com">RocketCode</a>
+              </h6>
+              <a href="">
+                <img class="certifwip" src="../Trabajo Final/imagenes/Logos/WIP.png" alt="certificate">
+              </a>
+
+            </div>
+
             <ul>
                 <li>Etiquetas y Atributos</li>
                 <li>CSS</li>
@@ -427,32 +448,30 @@
                 <li>Formularios</li>
                 <li>Eventos y Responsive</li>
               </ul>
-            
-              <a href="">
-                <img class="certifwip" src="../Trabajo Final/imagenes/Logos/WIP.png" alt="certificate">
-              </a>
-            
           </div>
         </div>
         <div class="certif-container__topics">
           <div class="certif-container__topics__card">
             <span class="certif-container__topics__card__data__time">En curso - 2021</span>
-            <h6 class="org">
-              Desarrollo de Videojuegos. 
-              <a class = "certif-links" href="http://www.funiversity.com.ar"> Inteligencia Educativa</a>
-            
-            </h6>
+            <div class = "tit-title">
+              <h6 class="org">
+                Desarrollo de Videojuegos. 
+                <a class = "certif-links" href="http://www.funiversity.com.ar"> Inteligencia Educativa</a>
+              
+              </h6>
+              <a href="">
+                <img class="certifwip" src="../Trabajo Final/imagenes/Logos/WIP.png" alt="certificate">
+              </a>
+            </div>
+
             <p>Nivel 1. Juegos Creados:</p>
             <ul>
               <li>Dino</li>
               <li>Batty</li>
               <li>Cannon</li>
               <li>Golem</li>
+              <li>Memo Card</li>
             </ul>
-            <a href="">
-              <img class="certifwip" src="../Trabajo Final/imagenes/Logos/WIP.png" alt="certificate">
-            </a>
-            
           </div>
         </div>
       </section>

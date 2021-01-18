@@ -3,6 +3,8 @@
   --color-secondary: #ff4c60;
   --color-terciary: #ffd15c;
   --color-forth: rgba(0, 128, 0, 0.37);
+  --shadow: grey;
+  --font: rgb(11, 28, 77);
 }
 
 /* ESTILOS GENERALES */
@@ -192,6 +194,7 @@
   align-items: center;
   padding: 60px;
   margin: 40px;
+  box-shadow: 0px 5px 20px 0px rgba(7, 37, 59, 0.486);
 
 }
 .titulowhoami{
@@ -224,15 +227,22 @@
 
 }
 /* SKILS */
+.skils-container__topics {
+  display: flex;
+  justify-content: space-between;
+
+}
+
 .skils-container__topics__card {
   width: 50%;
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
   margin-right: 20px;
-  color: var(--color-font);
-  background-color: white;
-  box-shadow: 0px 5px 20px 0px var(--color-shadow);
-
+  margin-bottom: 5px;
+  color: black;
+  background-color: var(--color-primary);
+  box-shadow: 0px 5px 20px 0px var(--shadow);
+  
 }
 
 .skils-container__topics__card:last-child {
@@ -260,20 +270,24 @@
 }
 
 /*Certificaciones y cursos*/
-.certif-container__topics{
-  display:flex;
+.tit-title{
+  display : flex;
+  flex-direction: row;
   justify-content: space-between;
-  box-sizing: border-box;
-
+}
+.certif-container__topics{
+  display: flex;
 
 }
 .certif-container__topics__card {
-  width: auto;
-  padding: 30px;
+  width: 50%;
+  padding: 20px;
   border-radius: 20px;
   margin-right: 20px;
-  color: var(--color-font);
-  box-shadow: 0px 5px 20px 0px var(--color-shadow);
+  margin-bottom: 5px;
+  color: black;
+  background-color: var(--color-primary);
+  box-shadow: 0px 5px 20px 0px var(--shadow);
 
 }
 
@@ -336,17 +350,66 @@
   font-size: 23px;
 
 }
+/*Investigue un poco en internet como hacer un read more/read less porque
+me quedaba muy ancho algun que otro bloque*/
+.read-more-state {
+  display: none;
+}
 
-/*SERVICES*/
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
 
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Más \21CA';
+
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Menos \21C8';
+
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 0 .5em;
+  color: var(--font);
+  background-color: var(--color-primary);
+  box-shadow: 0px 5px 20px 0px var(--shadow);
+  font-size: .9em;
+  line-height: 2;
+  border-radius: .25em;
+  margin-bottom: 6px;
+
+}
 /*EXPERIENCE*/
+
+.experience-container__topics {
+  display: flex;
+  justify-content: space-between;
+
+}
+
 .experience-container__topics__card {
-  width: 75%;
-  padding: 30px;
+  width: 50%;
+  padding: 15px;
+  margin-right: 15px;
   border-radius: 20px;
-  color: var(--color-font);
-  background-color: white;
-  box-shadow: 0px 5px 20px 0px var(--color-shadow);
+  color: var(--font);
+  background-color: var(--color-primary);
+  box-shadow: 0px 5px 20px 0px var(--shadow);
 
 }
 .org{
@@ -379,17 +442,16 @@
 /* WORKS */
 .works-container__topics{
   display:flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
 }
 .works-container__topics__card{
-  width: 30%;
-  padding: 30px;
+  width: 28%;
+  padding: 15px;
   border-radius: 20px;
-  margin:0;
-  color: var(--color-font);
-  background-color: white;
-  box-shadow: 0px 5px 20px 0px var(--color-shadow);
+  color: var(--font);
+  background-color: var(--color-primary);
+  box-shadow: 0px 5px 20px 0px rgba(221, 218, 218, 0.705);
   text-align: center;
   background-color: white;
   margin-bottom: 20px;
@@ -445,12 +507,12 @@
 }
 .textarea{
   height: 60px;
-  width: 499px;
+  width: 100%;
 
 }
 .namemail{
   height: 30px;
-  width: 499px;
+  width: 100%;
   display: flex;
 
 }
@@ -484,9 +546,16 @@
 }
 /* RESPONSIVE */
 @media (max-width: 1000px) {
+  * {
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+  }
   .container {
     max-width: initial;
+    padding: 40px 30px;
     width: 100%;
+
   }
 
   .navbar-container__desktop {
@@ -497,6 +566,11 @@
   .navbar-container__mobile {
     display: block;
     background-color: var(--color-primary);
+  }
+  .navbar-container__mobile__list__label {
+    display: flex;
+    flex-direction: column;
+  
   }
 
   .navbar-input,
@@ -511,9 +585,17 @@
   .navbar-input:checked ~ .navbar-open {
     display: none;
   }
+  .navbar-close,
+  .navbar-open {
+    padding: 20px;
+    font-size: 20px;
+    
+  }
 
   .navbar-contet {
     display: none;
+    /*flex-direction: column;
+    display: none;*/
   }
   
   .navbar-input:checked ~ .navbar-contet {
@@ -522,54 +604,152 @@
     align-items: center;
 
   }
-  .contactme-container__main{
-    max-width: initial;
+  .skils-container__topics {
+    flex-direction: column;
+  
+  }
+
+  .skils-container__topics__card {
+    width: 100%;
+    margin: 0;
+  
+  }
+
+  .skils-container__topics__card:last-child {
+    margin-top: 20px;
+  
+  }
+  .certif-container__topics {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .certif-container__topics__card {
+    width: 100%;
+    margin: 0;
+  
+  }
+
+  .certif-container__topics__card:last-child {
+    margin-top: 20px;
+  
+  }
+
+  .services-container__topics {
+    flex-wrap: wrap;
+  }
+
+  .services-container__topics__card {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    
+  }
+  .experience-container__topics {
+    flex-direction: column;
+  }
+
+  .experience-container__topics__card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .experience-container__topics__card:last-child {
+    margin-top: 20px;
+  }
+
+  .contactme-container__main__text {
+    width: 100%;
+  }
+
+  .contactme-container__main {
+    flex-direction: column;
+  }
+
+  .contactme-container__main__form {
+    width: 100%;
+  }
+
+  .contactme-container__main__form__name {
     display: flex;
     flex-direction: column;
-    padding: 40px 30px;
-    justify-content: center;
-      
+  }
+
+  .contactme-container__main__form__name > label {
+    margin: 0;
+  }
+
+  .contactme-container__main__form__name > label:last-child {
+  margin-top: 20px;
+  }
+
+  footer {
+    padding: 0 10px;
   }
   .textarea{
     height: 60px;
-    width: 100%;
+    width: 95%;
   
   }
   .namemail{
     height: 30px;
-    width: 100%;
-    display: flex;
+    width: 95%;
+    
   
   }
-  .enviar_button{
+  .enviar_button {
     border-radius: 5px;
     border: none;
     width: auto;
-    height:auto;
-    display:flex;
-    align-items: flex-end;
-    margin-left: 375px;
-  
-  }
-  .banner-main{
+    height: auto;
     display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-bottom: 150px;
-  
-  }
+    align-items: center;
+    margin-left: auto;
+
+}
+.banner-container {
+  height: calc(100% - 63px);
+}
+
+.banner-main{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 110px;
+  align-items: center;
+
+}
+.banner-container__scroll{
+position: absolute;
+bottom: -30px;
+
+}
+
+.avatar{
+  width: 200px;
+  height: 200px;
+  background-image: url(../imagenes/my-octocat-1609338970774.png);
+  background-size: cover;
+  position: relative;
+  margin-top: 40px;
+   
+}
+.avatar:hover{
+  background-image: url("../imagenes/my-octocat-1609698871425.png");
+
+}
+.banner-socmed{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
   .socmed{
     font-size: 30px;
     color: black;
     margin-top: 25px;
   
   }
-  .banner-socmed{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  
-  }
+
   
   .socmed:hover{
     font-size: 35px;
@@ -599,9 +779,10 @@
     margin-left: 30px;
     background-color: rgba(100, 175, 237, 0.24);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
+    box-shadow: 0px 5px 20px 0px rgba(7, 37, 59, 0.486);
   
   }
   .profimg{
@@ -626,8 +807,15 @@
   .cvbtn{
     text-decoration: none;
   }
+  .works-container {
+    text-align: center;
+  }
+  .works-container__topics{
+    flex-direction: column;
+    align-items: center;
+  }
   .works-container__topics__card{
-    width: 45%;
+    width: 100%;
     padding: 30px;
     border-radius: 20px;
     margin:0;
