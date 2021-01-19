@@ -1,0 +1,1587 @@
+ HTML >> Lenguaje de marcado de hipertexto
+
+Esta compuesto por etiquetas y atributos que a su vez forman elementos
+	>> crear un archivo con la extension .html
+	>> primer archivo index.html
+	>> evitar espacios, caracteres especiales y tildes
+
+Cada elemento en la web debe estar dentro de una etiqueta
+	>> apertura y cierre <etiqueta atributo="valor">contenido </etiqueta>
+		· textos planos
+		· etiquetas 
+	>> apertura y cierre en si mismas <etiqueta atributo="valor"/> --> no tienen contenido
+
+<etiqueta>
+	<etiqueta atributo="valor" />
+	<etiqueta atributo="valor" />
+</etiqueta>
+
+Estructura inicial >> Esta compuesta por las etiquetas html, head y body
+
+<!DOCKTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta 
+			name = "viewport"
+			content="width=device-width, initial-scale=1.0"
+		
+		/>
+
+		<title>RocketCode</title>
+
+
+	</head>
+	<body></body>
+</html>
+
+Etiquetas basicas
+	HTML >> Contiene a todas las etiquetas
+	HEAD >> Contiene caracteristicas del html, links y detalles necesarios para darle estructura
+	BODY >> El resto de las etiquetas, navbar, banner, listados, etc
+
+HEAD >> contiene la etiqueta title, es el titulo de la pagina
+	 >> Meta --> UTF8 necesaria para usar tildes
+	         --> Viewport necesaria para adaptar a otros dispositivos.
+
+DOCTYPE >> informa al navegador la version del html q estamos usando en el archivo actual --> 5
+
+Reestructuramos el hola mundo a lo aprendido en la estructura inicial
+
+! + tab escribe completamente la estructura inicial
+
+Etiquetas
+	>> Texto
+	>> Listas
+	>> Link
+	>> Contenedores
+
+Texto --> h1-h6 
+
+Son etiquetas de importancia jerarquica h1 solo 1 por pagina
+
+p --> Contiene parrafos
+
+<p>contenido descriptivo</p>
+
+lista >> nos permiten representar una lista de elementos sin orden o una lista ordenada. Primero se define el tipo de lista ul/ol y luego los diferentes items son representados con li
+
+sin orden
+
+<ul>
+  <li>contenido</li>
+  <li>contenido</li>
+  <li>contenido</li>
+</ul>
+
+ordenada
+
+<ol>
+  <li>contenido</li>
+  <li>contenido</li>
+  <li>contenido</li>
+</ol>
+
+Ejemplo
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <ul>
+        <li>Grabar Video</li>
+        <li>Editar Video</li>
+
+    </ul>
+    <ol>
+        <li>Grabar Video</li>
+        <li>Editar Video</li>
+    </ol>
+</body>
+</html>
+
+En el browser los primeros dos se ven con un puntito y los segundos dos numerados.
+
+Lista con formato pregunta y respuesta:
+
+<dl>
+  <dt>titulo 01</dt>
+  <dd>respuesta</dd>
+
+  <dt>titulo 02</dt>
+  <dd>respuesta</dd>
+</dl>
+
+Se pueden usar listas dentro de listas:
+
+    <ol>
+        <li>Grabar </li>
+        <li>Editar </li>
+        <li>
+            <ul>
+                <li>hola</li>
+                <li>chau</li>
+            </ul>
+        </li>
+    </ol>
+
+
+ejercicio:
+Crear un “ToDoList”, el cual contenga:
+-Titulo
+-Descripción
+-Lista de tareas
+
+Etiqueta Link --> crea un enlace a otro recurso. Podemos redireccionar a otras paginas, a una seccion de nuestra propia pagina
+
+atributo href >> referencia de hacia donde se va a dirigir el cursos o que accion va a suceder cuando se clickee esa etiqueta
+
+<a href="https://www.rocketcode.com.ar">
+	Rocket Code
+</a>
+
+<a href="contacto.html">contactanos</a>
+
+ejemplo teorico de nuestra pagina a una pagina externa:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+</head>
+<body>
+    <a href="http://www.rocketcode.com.ar"> ir a Rocket Code</a>
+</body>
+</html>
+
+nuestra pagina a nuestro index
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+</head>
+<body>
+    <a href="http://www.rocketcode.com.ar"> ir a Rocket Code</a>
+    <a href="index.html">Ir a la lista</a>
+</body>
+</html>
+
+
+a lo largo de la pagina
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+</head>
+<body>
+    <a href="http://www.rocketcode.com.ar" id="link"> ir a Rocket Code</a>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum nemo reprehenderit natus neque 
+        voluptatem, alias nesciunt laudantium magni. Doloribus numquam blanditiis minus eaque error 
+        quam nam quo aperiam dolores possimus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum nemo reprehenderit natus neque 
+        voluptatem, alias nesciunt laudantium magni. Doloribus numquam blanditiis minus eaque error
+         quam nam quo aperiam dolores possimus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum nemo reprehenderit natus neque
+         voluptatem, alias nesciunt laudantium magni. Doloribus numquam blanditiis minus eaque error 
+         quam nam quo aperiam dolores possimus.</p>
+    <a href="index.html">Ir a la lista</a>
+    <a href="#link">ir al otro link</a>
+    
+</body>
+</html>
+
+Contenedores >> Son etiquetas que no se representan visualmente, pero son utiles para armar estructuras html <div></div>
+
+
+Proyecto Final
+
+Objetivo >> Replicar un sitio web
+
+puntos a tener en cuenta
+	> Scaffolding de carpetas
+	> Estructuras HTML
+	> Selectores CSS
+	> Diseño del sitio
+	> Responsive
+
+CSS >> Hoja de estilos en cascada. Es un lenguaje compuesto por selectores, propiedades y valores.
+
+Extension .css > El browser interpreta que estamos escribiendo eso
+	> Se lo llama index.css o style.css
+	> No usar espacios ni tildes
+
+selector {
+	propiedad: valor;
+
+}
+
+Las reglas son estructursas que defninen como se visualizan ciertos html.
+
+selector {
+	propiedad-1: valor;
+	propiedad-2: valor;
+	propiedad-3: valor;
+}
+
+una regla puede tener mas de un atributo o propiedad y tambien podemos tener la cantidad de reglas que necesitemos
+
+Un selector es una referencia de un elemento HTML al cual le queremos aplicar determinados estilos
+
+Etiqueta
+	>> No es necesario asociar el selector en HTML
+	>> Aplicar a todos los elementos
+
+Clase
+	>> Es necesario asociar el selector en HTML
+	>> Aplica solo a los elementos que le asignamos la clase
+
+ID
+	>> Es necesario asociar el selector en HTML
+	>> Aplica solo a los elementos que le asignamos el ID
+
+/* Etiqueta */
+h1{
+    color: red;
+
+}
+/* ID */
+#titulo{
+    color:red;
+}
+/* Clases */
+
+.titulo {
+    color:red;
+    
+}
+
+La forma correcta de llamar al css es a traves de clases. Varias etiquetas pueden compartir clases. Las clases pueden estar repetidas a lo largo del html, pero los ID no.
+
+Importar estilos:
+
+Linea
+	>> No necesitamos crear archivos adicionales
+	>> No podemos reutilizar estilos
+	>> HTML/CSS Mezclado
+
+Internos
+	>> No necesitamos crear archivos adicionales
+	>> Podemos reutilizar estilos
+	>> HTML/CSS en el mismo archivo
+
+Externos
+	>> Necesitamos crear un archivo adicional
+	>> Podemos reutilizar estilos
+	>> HTML/CSS separados
+
+Para linkearlo lo hacemos de la siguiente manera:
+
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="/index.css">
+
+</head>
+
+practica--index.html------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Styles/index.css" rel="stylesheet">
+    
+    <title>Clase 05</title>
+</head>
+<body>
+
+    <h1 id ="titulo" class="titulo">Titulo</h1>
+    <p class="titulo">Subtitulo</p>
+</body>
+</html>
+
+-----index.css-------------------------------------------------------------------------------------------------------------------------------
+/* Etiqueta */
+h1{
+    color: red;
+
+}
+/* ID */
+#titulo{
+    color:red;
+}
+/* Clases */
+
+.titulo {
+    color:red;
+    
+}
+
+Propiedades y valores
+
+Estilos de texto
+	> Tamaño, puede especificarse en px o en em (la mas conveniente)
+
+.titulo {
+	font-size:28px;
+}
+
+.titulo {
+	font-size:2em;
+}
+
+	> Grosor, en tipos o por tamaño
+
+
+.titulo{
+	font-weight: normal;
+}
+
+.descripcion{
+	font-weight: bold;
+}
+.descripcion{
+	font-weight: 400;
+}
+
+	> Alto de linea
+
+.titulo{
+	font-size:20px;
+	line-height: 1; //20px
+
+}
+.descripcion{
+	font-size:16px;
+	line-height: 1.5; //24px
+	
+}
+	> Alineacion --> izquierda, centro o derecha
+
+.titulo{
+	text-align: center;
+
+}
+.descripcion{
+	text-align: left;
+
+}
+
+Tipografias >> font-family --> define una lista de fuentes o familias de fuentes con un orden de prioridad.
+
+html{
+	font-family: arial, sans-serif;
+  //font-family: 'tipografia','familia'
+
+}
+
+Hay que especificar la famlia porque en caso de que la tipografia no exista mas va a recurrir a la famlia para tomar un tipo de tipografia similar a la que estabamos utilizando.
+Google Font --> acceso a infinidad de tipografias
+
+Color
+
+.title{
+	color: black;
+
+}
+
+.descripcion{
+	color: grey;
+
+}
+.title{
+	color: #000;
+
+}
+
+.descripcion{
+	color: #454545;
+
+}
+.title{
+	color: rgb(0,0,0);
+
+}
+
+.descripcion{
+	color: rfba(125, 125, 125, 0.9);
+
+}
+
+Estilos de fondo
+
+Las etiquetas, si no tienen contenido, no las vamos a ver en los navegadores. Dependen de las propiedades que se les especifiquen en width y height.
+
+Width >> Ancho de un elemento
+
+.section{
+	width: 200px;
+
+}
+.section{
+	//util en responsive
+	width: 50%;
+
+}
+.section{
+	//viewport --> lo que se ve en la pantalla
+	width: 100vw;
+
+}
+
+Height >> Alto de un elemento
+
+.section{
+	height: 200px;
+
+}
+.section{
+	//util en responsive
+	height: 50%;
+
+}
+.section{
+	//viewport --> lo que se ve en la pantalla 
+	height: 100vh;
+
+}
+
+Fondo >> funciona de la misma manera q antes
+
+.section{
+	background-color:#454545;
+}
+
+Background-image >> asignamos una imagen de fondo a un elemento
+
+.section {
+  background-image: 
+		url("https://www.rocketcode.com.ar/assets/logo/full_logo.svg");
+  //necesarios para visualizar la imagen
+  width: 300px;
+  height: 300px;
+
+}
+
+Background-position >> Definimos la posicion inicial de la imagen de fondo
+
+.section{
+	background-position: 0% 0%;
+
+}
+.section{
+	background-position: left-top;
+	
+}
+
+Background-size >> modifica el tamaño de la imagen
+
+.section{
+	background-size: 50% 50%;
+
+}
+.section{
+	background-size: 50px 50px;
+
+}
+.section{
+	//la imagen ocupa todo lo q tiene que ocupar
+	background-size: cover;
+
+}
+.section{
+	background-size: contain;
+
+}
+
+Practica integradora:
+
+Mi resolucion:
+
+index.html-----------------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles/index.css" rel="stylesheet">
+  <title>Card de curso</title>
+</head>
+<body>
+  <div class="card">
+    <h4 class="pretitulo">Curso</h4>
+
+    <h1= class="titulo">Html y Css</h1>
+
+    <div class="avatar">
+
+      <p class = "parrafo">
+      Aprende a crear estructuras de sitios web con HTML5 y CSS3. Podras hacer paginas responsive, para que en todos los dispositivos
+      se vea increible, de cero a profesional, sin dificultades
+      </p>
+
+    </div>
+    <div>
+      <p class="parrafo">
+      Por <span class="span">Natalia Guida</span>, MercadoLibre en Frontend Developer</div>
+      </p>
+  </div>
+</body>
+</html>
+
+index.css------------------------------------------------------------------------------------------------------------------------------------
+.card {
+  border-radius: 10px;
+  border-left: 10px solid pink;
+  padding: 20px;
+  box-shadow: 0 0 8px 0 rgba(144,149,161,.15);
+  width: 500px;
+}
+
+.avatar {
+  border-radius: 50px;
+}
+
+.titulo{
+  font-weight: bold;
+  color: #ECB8CE;
+  font-size: 40px;
+}
+
+.parrafo{
+  color: #5F6478;
+  font-size: 20px;
+  font-weight: normal;
+
+}
+.nombre{
+  color: #5F6478;
+  font-size: 20px;
+  font-weight: normal;
+
+}
+.pretitulo{
+  color: #AFB3C0;
+  font-weight: bold;
+
+}
+.span{
+  font-weight: bold;
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Problemas respecto a la solucion que esta en /home/gerardo/Documentos/HTML-CSS/Clase 7/
+
+· Adentro del div avatar va SOLO la imagen
+· Hacer una clase aparte para el segundo parrafo donde indica el nombre y actividad
+· En el video, con la profe agregue todo lo relacionado a la imagen:
+	--> Obligatorio:
+		- width
+		- height
+		- background-size
+· Despues de plantearlo como lo hice porque me tomaba siempre la font del titulo si no especificaba el resto saque ese h1 y lo cree de nuevo
+y anda con la resolucion propuesta:
+
+index.html-----------------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/index.css" rel="stylesheet">
+
+    <title>Card de curso</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="card">
+      <h4 class="pretitulo">Curso</h4>
+      <h1 class="titulo">Html y Css</h1>
+
+
+      <p class = "parrafo">
+        Aprende a crear estructuras de sitios web con HTML5 y CSS3. Podras hacer paginas responsive, para que en todos los dispositivos
+        se vea increible, de cero a profesional, sin dificultades
+      </p>
+
+      <div class="avatar"></div>
+
+      <div >
+        <p class="nombre">Por <span class="span">Natalia Guida</span>, MercadoLibre en Frontend Developer</p>
+      </div>
+    </div>    
+  </body>
+</html>
+
+index.css------------------------------------------------------------------------------------------------------------------------------------
+.card {
+  border-radius: 10px;
+  border-left: 10px solid pink;
+  padding: 20px;
+  box-shadow: 0 0 8px 0 rgba(144,149,161,.15);
+  width: 500px;
+  /*Para que este en todas las clases*/
+  font-family: 'Nunito', sans-serif;
+}
+
+.avatar {
+  border-radius: 50px;
+  background-image: url(../Selección_006.png);
+  /*obligatorio para que se vea la imagen*/
+  width: 55px;
+  height: 55px;
+  background-size: cover;
+}
+
+.titulo{
+  color: #ECB8CE;
+  font-weight: bold;
+
+}
+
+.parrafo{
+  color: #5F6478;
+
+}
+.nombre{
+  color: #5F6478;
+
+}
+.pretitulo{
+  color: #AFB3C0;
+
+}
+.span{
+  font-weight: bold;
+
+}
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+SEO >> nivel de una busqueda organica
+
+Semantica >> propone reforzar el significado del contenido de nuestro sitio web
+
+Bloques Semanticos
+
+  >> Header --> Define la cabecera de una pagina o seccion. Usualmente congiene un logotipo, el titulo del sitio web y una tabla de 		   navegacion de contenidos
+  >> Nav --> Define una seccion que solamente contiene enlaces de navegacion
+  >> Section --> Define una seccion en un documento
+  	 > Article --> Define contenido autonomo que podria existir independientemente del resto del contenido
+  >> Aside --> Define algunos condenidos vagamente relacionados con el resto del contenido de la pagina.
+  >> Footer --> Define el pie de pagina o una seccion. 
+
+Sacarle los puntitos/numeros a las listas:
+
+list-style
+
+ul{
+    list-style: none;
+}
+
+Etiquetas semanticas
+
+Importancia Semantica <strong></strong> >> se va a ver en bold y tiene estructura o importancia semantica
+
+<em></em> >> Cursiva
+
+<mark></mark> >> Subrayado
+
+<cite></cite> >> Cita
+
+<abbr></abbr> >> Abreviatura
+
+FAVICON >> nos permite agregar un icono en la pestaña al lado del title
+
+<head>
+  <link
+    href="https://www.rocketcode.com.ar/favicon-96x96.png"
+    rel="icon"
+    type="image/png"
+  />
+</head>
+
+type >> indica el tipo de imagen que estamos usando.
+
+Multimedia
+
+Imagenes 
+
+<img 
+	src="RECURSO"
+	alt='descripcion'
+
+ />
+
+Ejemplo index
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Clase 9/styles/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <img 
+        src="imagen.png" 
+        alt=""
+    >
+</body>
+</html>
+
+Iconos
+	Flaticon --> descargamos svg y usamos
+	FontAwesome
+	--> bajamos svg 
+	--> usamos el html con un script en head
+    <script
+      src="https://kit.fontawesome.com/a25bc156df.js"
+      crossorigin="anonymous">
+    </script>
+
+Desafio de la clase 7, cambiar el div por un <img src="">
+
+      <!--<div class="avatar"></div>-->
+      <img class ="avatar" src="../desafio-clase-07/Selección_006.png" alt="Seleccion_006">
+
+Uso la clase todavia para que la foto quede igual que con el div.
+
+Audio y video
+
+<audio src="recurso" controls></audio>
+
+<video src="recurso"></video>
+
+src --> recurso
+controls --> controles play,pausa, etc
+autoplay --> carga la pagina y se reproducen
+loop --> se repite continuamente
+
+Normalizador --> Los elementos deben representarse de una manera por defecto. Por tal motivo, cada browser tiene su propia hoja de estilos base.
+Normalize.css >> Hace que los navegadores procesen todos los elementos de manera mas consistenta y en lina con los estandares modernos
+
+Modelo de caja >> cada elemento ocupa un espacio dentro del sitio. Dicho espacio, esta compuesto por varias capas.
+  --> Capa 1
+       > width
+       > height
+  --> Capa 2
+       > Padding >> Generar espacio entre el contenido y el borde de la caja
+
+       .section{
+        padding-top: 8px;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+
+       }
+       .section{
+       padding: 8px 16px 8px 16px;
+       //padding 'top' 'right' 'bottom' 'left'
+
+       }
+       .section{
+       padding: 8px 16px;
+       //padding 'top/bottom''right/left'
+
+      }
+      .section{
+       padding: 8px;
+      // todos 8px
+      }
+  -->Capa 3 
+      > border >> Genera un contorno en la caja
+
+      .section{
+      border: 1px solid black;
+
+      }
+      .section{
+      border: 1px solid #fafafa
+
+      }
+       .section{
+       border-radius: 8px 16px 8px 16px;
+       //border-radius: 'top' 'right' 'bottom' 'left'
+
+       }
+       .section{
+       border-radius: 8px 16px;
+       //border-radius: 'top/bottomborder-raborder-radius:eft'
+
+      }
+      .section{
+       border-radius: 8px;
+      // todos 8px
+
+      }
+
+  -->Capa 4
+      > Margin >> Genera un espacio entre el borde de la caja y otros elementos
+      .section{
+        margin-top: 8px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        margin-left: 8px;
+
+      }
+      .section{
+       margin: 8px 16px 8px 16px;
+       //margin 'top' 'right' 'bottom' 'left'
+
+      }
+      .section{
+       margin: 8px 16px;
+       //margin 'top/bottom''right/left'
+
+      }
+      .section{
+       margin: 8px;
+      // todos 8px
+      
+      }
+
+Ancho total de la caja = width + padding + border
+
+.section{
+  width: 200 px;
+  padding: 20px;
+
+}
+20px + 200px + 20px = 240 px
+
+.section{
+  width: 200 px;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
+20px + 160px + 20px = 200 px
+
+Box sizing >> iguala el ancho total al width
+
+Posicionamiento
+
+Display 
+  inline >> Los elementos en linea ocupan solo el espacio que ocupa el contenido. No es posible alterar las dimensiones width y height
+  block >> Los elementos en bloque ocupan el mismo ancho que su contenedor padre. El relleno se completa con su margin.
+  inline-block >> Se comportan como un elemento en linea pero soportan todas las propiedades de los elementos en bloque.
+                  Vamos a poder modificarle el width y el height
+  none >> Los elementos quedan ocultos, sin embargo sus etiquetas siguen estando en el codigo html
+
+div{
+  display: inline;
+
+}
+
+por defecto esta en block. A traves del inspeccionar vemos que en inline ocupa solo el contenido. al pones ambas en inline se pone una al lado de la otra. Las etiquetas span tienen un width y un height por definicion, no pueden alterarse.
+
+Posicion
+    --> Relative >> Transforma nuestra caja en algo literalmente relativo en relacion a lo que vemos en la pantalla. Podemos desplazar un elemento en relacion a si mismo. No afecta la posicion de ningun otro
+
+#box{
+    position:relative;
+    left: 0px;
+    top: 140px;
+
+}
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Clase 11/Styles/index.css">
+    <link rel="stylesheet" href="../Clase 11/Styles/Normalize.css"> 
+
+</head>
+<body>
+    <div class = "caja1">Caja 1</div>
+    <div class = "caja2">Caja 2</div>
+    
+</body>
+</html>
+
+index.css
+
+.caja1{
+    width: 200px;
+    height: 200px;
+    background-color: plum; 
+    position: relative;
+    top: 100px;
+    left: 150px;
+
+}
+.caja2{
+    width: 100px;
+    height: 100px;
+    background-color: purple; 
+
+}
+
+Tip proyecto final >> el position: relative nos va a servir en mobile para que nuestro navbar este posicionado relativamente y podemos desplazar la informacion de los items sin afectar al resto del contenido.
+    
+    --> Absolute >> Podemos desplazar un elemento en relacion a su padre. Afecta la disposición de los otros elementos. 
+
+#box{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+}
+
+ejemplo index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Clase 11/Styles/index.css">
+    <link rel="stylesheet" href="../Clase 11/Styles/Normalize.css"> 
+
+</head>
+<body>
+    <div class = "caja1">Caja 1
+        <div class = "caja2">Caja 2</div>
+    </div>
+
+    
+</body>
+</html>
+
+ejemplo index.css
+
+.caja1{
+    width: 200px;
+    height: 200px;
+    background-color: plum; 
+    position: relative;
+    
+}
+.caja2{
+    width: 100px;
+    height: 100px;
+    background-color: purple; 
+    position: absolute;
+
+}
+
+Con relative, a pesar de que la podemos poner por cualquier lado en la pantalla, sigue ocupando un lugar especifico en la pantalla. Absolute no y no ocupa ningun lugar en especifico. A su vez su posicionamiento tiene una relacion con su padre. El posicionamiento que vemos que afecta al resto de las cajas no es aleatorio, sino que quien tenga esta prioridad se va a manejar dentro de los parametros que tenga su padre, y, consecuentemente, va a buscar al primer padre con position relative. Si no encuentra a ninguno, busca al body como ultimo padre y se va a desplazar por todo el resto de la pantalla. Cada vez que usemos una caja con position absolute, queramos tenerla contenida en una caja con position relative porque sino no podremos manejarla. 
+
+z-index >> conteola que elemento esta encima de otro. En caso de por ej, tener dos cajas posicionadas absolutas
+
+En este ejemplo se ve solamente la caja 3 y no la dos porque es la ultima que esta posicionada absolutamente:
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Clase 11/Styles/index.css">
+    <link rel="stylesheet" href="../Clase 11/Styles/Normalize.css"> 
+
+</head>
+<body>
+    <div class = "caja1">Caja 1
+            <div class = "caja2">Caja 2</div>
+            <div class = "caja3">Caja 3</div>
+    </div>
+
+    
+</body>
+</html>
+
+index.css
+
+.caja1{
+    width: 200px;
+    height: 200px;
+    background-color: plum; 
+    position: relative;
+
+
+}
+.caja2{
+    width: 100px;
+    height: 100px;
+    background-color: purple; 
+    position: absolute;
+
+}
+.caja3{
+    width: 100px;
+    height: 100px;
+    background-color: blue; 
+    position: absolute;
+
+}
+
+con z-index vamos a manejar la aparicion de las cajas. Agregado en .caja2:
+
+.caja2{
+    width: 100px;
+    height: 100px;
+    background-color: purple; 
+    position: absolute;
+    z-index: 1;
+
+}
+
+Con esto se ve la caja 2. Lo que sucede con el z-index nos permite manipular la posicion de las capas.
+
+fixed >> Podemos desplazar un elemento en relacion a su viewport. Este tipo de desplazamiento afecta a la posicion de otros elementos. Esto hace que por mucho q scrolleemos quede la caja arriba en nuestros navegadores.
+
+Ejercicio propuesto al desafio clase 11. 1-2
+
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Clase10.Ejercicio 1/Styles/index.css">
+    <link rel="stylesheet" href="../Clase10.Ejercicio 1/Styles/Normalize.css"> 
+
+</head>
+<body>
+    <div>
+        <div class = "card uno">
+            <h1>Titulo</h1>
+            <p>Descripcion Corta</p>
+    
+        </div>
+        <div class = "card dos">
+            <h1>Titulo</h1>
+            <p>Descripcion Corta</p>
+    
+        </div>
+        <div class = "card tres">
+            <h1>Titulo</h1>
+            <p>Descripcion Corta</p>
+    
+        </div>
+
+
+    </div>
+    <div>
+        <div class = "card cuatro">
+            <h1>Titulo</h1>
+            <p>Descripcion Corta</p>
+
+        </div>
+        <div class = "card cinco">
+            <h1>Titulo</h1>
+            <p>Descripcion Corta</p>
+
+        </div>
+        <div class = "card seis">
+            <h1>Titulo</h1>
+            <p>Descripcion Corta</p>
+
+        </div>
+    </div>
+    <footer class="footer">
+
+        <a title="Facebook" href="http://www.facebook.com">
+            <img class="img" src="../Clase10.Ejercicio 1/Logos/logotipo-circular-de-facebook.svg" alt="logotipo-circular-de-facebook">
+        </a>
+
+        <a title="instagram" href="http://www.instagram.com">
+            <img class="img" src="../Clase10.Ejercicio 1/Logos/instagram.svg" alt="instagram">
+        </a>
+
+        <a title="Twitter" href="http://www.twitter.com">
+            <img class="img" src="../Clase10.Ejercicio 1/Logos/gorjeo.svg" alt="tw">
+        </a>
+
+        <a title="Github" href="http://www.github.com">
+            <img class="img" src="../Clase10.Ejercicio 1/Logos/github.svg" alt="github">
+        </a>        
+        
+    </footer>
+    
+</body>
+</html>
+
+index.css
+
+.card{
+    width: 400px;
+    height: 200px;
+    background-color: beige;
+    border-radius: 10px;
+    border-left: 10px solid blue;
+    /*Cantidad de pixeles tipo de color color*/
+    padding: 90px 0px 0px 10px;
+    margin : 20px;
+    /*ajustamos la caja*/
+    box-sizing: border-box;
+
+}
+.uno{
+    background-image: url('../top11.png'); 
+    background-size: 100% 100%;
+    display: inline-block;
+
+}
+.dos{
+    background-image: url('../descarga.jpeg'); 
+    background-size: 100% 100%;
+    display: inline-block;
+
+}
+.tres{
+    background-image: url('../DevOps.png'); 
+    background-size: 100% 100%;
+    display: inline-block;
+    
+}
+.cuatro{
+    background-image: url('../infrastructure-banner-500x500.png'); 
+    background-size: 100% 100%;
+    display: inline-block;
+
+}
+.cinco{
+    background-image: url('../prod-art-aws-600-width-1200.png'); 
+    background-size: 100% 100%;
+    display: inline-block;
+
+}
+.seis{
+    background-image: url('../prod-art-aws-600-width-1200.png'); 
+    background-size: 100% 100%;
+    display: inline-block;
+
+}
+.footer{
+    position: fixed;
+
+}
+.img{
+    border-radius: 50px;
+    background-image: url(../Selección_006.png);
+    /*obligatorio para que se vea la imagen*/
+    width: 75px;
+    height: 75px;
+    background-size: cover;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+Flexbox >> La idea principal detras del diseño con flexbox es darle al contenedor la capacidad de alterar el alto y el ancho de sus hijos para llenar mejor el espacio disponible
+
+Flex >> Asignarle un contexto flexible a todos sus hijos directos.
+
+index.html ---------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../Clase 12/styles/index.css" rel="stylesheet" >
+</head>
+<body>
+    <div class="padre">
+        <div class="hijo">1</div>
+        <div class="hijo">2</div>
+        <div class="hijo">3</div>
+
+    </div>
+    
+</body>
+</html>
+index.css-------------------------------------------------------------------------------------------------------------------------------
+.padre{
+    width: 700px;
+    height: 500px;
+    background-color: plum;
+    display: flex;
+
+}
+.hijo{
+    width: 100px;
+    height: 100px;
+    background-color: powderblue;
+    margin: 20px;
+        
+}
+
+las cajas quedan una al lado de la otra de forma horizontal con un margen
+
+
+Flex-Direction >> Establece el eje principal, definiendo asi la direccion en la que se colocan los elementos flexibles en el contenedor
+
+flex-direction: row
+
+flex-direction: row-reverse >> invierte el orden en filas
+
+modificando el index.css la caja padre se invierte y quedan 3,2,1 a derecha
+
+.padre{
+    width: 700px;
+    height: 500px;
+    background-color: plum;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+
+flex-direction: column
+
+flex-direction: column-reverse invierte el orden en columnas
+
+Flex-Wrap >> Todos los elementos flexibles intentaran encajar en una linea. Podemos modificar este comportamiento y hacer que se acomoden al ancho del contenedor.
+
+flex-wrap: nowrap;
+
+flex-wrap: wrap; >> las cajas que no entran en la fila se van para abajo manteniendo su tamaño
+
+.padre{
+    width: 700px;
+    height: 500px;
+    background-color: plum;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+}
+
+flex-wrap: wrap-reverse;
+
+Justify-Content >> Nos permite controlar la alineacion y distribucion de los elementos hijos en el eje horizontal.
+
+justify-content: flex-start;     --> a izq
+                 flex-end;       --> a derecha
+                  .padre{
+                    width: 700px;
+                    height: 500px;
+                    background-color: plum;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-end;
+
+                  }                 
+                 center;         --> a centro
+                  .padre{
+                    width: 700px;
+                    height: 500px;
+                    background-color: plum;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                  }
+
+                 space-between;  --> a las puntas y margenes al centro proporcionales
+                 space-around;   --> a las puntas y margenes al centro proporcionales + margenes a los costados
+                 space-evenly;   --> a las puntas y margenes al centro proporcionales + margenes a los costados mayor
+
+Align-Items >> Nos permite controlar la alineacion y distribucion de los elementos hijos en el eje vertical:
+
+align-items: flex-start;
+             flex-end;
+             center;
+                  .padre{
+                    width: 700px;
+                    height: 500px;
+                    background-color: plum;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;  
+
+                  }
+             strech;
+             baseline; 
+
+Align-Content >> Cuando el contenido tiene varias lineas, la mejor opcion para alinear el contenido verticalmente es align-content
+
+align-content: flex-start;
+               flex-end;
+               center;
+                  .padre{
+                    width: 700px;
+                    height: 500px;
+                    background-color: plum;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+
+                  }
+
+               strech;
+               space-betweeen;
+               space-around; 
+
+Clase 13, practica integradora, navbar.
+
+Index.html----------------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="../Clase 13/styles/index.css">
+</head>
+<body>
+    <nav class="navbar">
+
+        <img src="../Clase 13/imagenes/logo_full.svg" alt="Logo" class="logo"> 
+
+        <ul class="lista">
+            <li class="items">Cursos</li>
+            <li class="items">Se profesor</li>
+            <li class="items">Contactanos</li>
+            <li class="items">Ingresar</li>
+        </ul>
+
+    </nav>
+</body>
+</html>
+
+index.css-----------------------------------------------------------------------------------------------------------------------------------
+body{
+    background-color: #fafafa;
+
+}
+.navbar{
+    /*queremos que todos los hijos esten uno al lado del otro*/
+    display:flex;
+    background-color: #ffffff;
+    border-radius: 10px;
+    /*4 posiciones top right bottom left color*/
+    box-shadow: 0px 0px 10px 0px black;
+    /*El alto importa el numero el largo le ponemos el completo de la pantalla*/
+    height: 70px;
+    width: 100%;
+    /*esto es para que este uno a cada lado de la pantalla*/
+    justify-content: space-between;
+    /*centrado verticalmente*/
+    align-items: center;
+    /*Espacio entre los objetos*/
+    padding: 0px 26px;
+    /*para que no se vaya del width por la sumatoria del tamaño, padding, margin, etc*/
+    box-sizing: border-box;
+
+}
+.logo{
+    height: 30px;
+    width: auto;
+
+}
+.lista{
+    display: flex;
+    list-style: none;
+
+}
+.items{
+    margin-left: 26px;
+    /*se aprovecha el padding y solamente se pone a la izq para que no este tan lejos
+    y si este a 26px*/
+
+}
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Formulario >> etiqueta form, nos permite crear un formulario
+
+<form action="{URL}" method="{METODO_HTTP}">
+  
+//contenido
+
+</form>
+
+action >> url a la cual vamos a enviar esos datos. Backend, base de datos para dirigir.
+method 
+  >> GET --> Los datos del formulario son adjuntados a la URI del atributo action, con un "?" como separador, y la URI resultante es enviada al servidor
+  >> POST --> Los datos del formulario son incluidos en el cuerpo del formulario y son enviados al servidor. Registro
+
+label >> Nos permite vincular un bloque HTML a otro elemento. Cuando hagamos click dentro del label, se activara el elemento asociado
+
+<label for="name">Nombre</label>
+
+<label id="name"></label>
+
+for y id tienen que compartir el nombre, de esta manera al clickear el label se activa la caja
+
+tipos de parametro en input
+
+<input 
+    type="text" <!--tipo de dato
+    id="first_name" <!--id para que pegue con el label
+    name="first_name" <!--nombre del campo
+    placeholder="Ingresa tu nombre"<!--texto dentro del campo
+    value="Martina" <!--Valor por defecto.
+
+>
+
+tipos de input
+  >> text --> texto
+  >> email --> despliega mails utilizados
+  >> password --> encripta la contraseña
+  >> number --> solo deja escribir numeros
+  >> tel --> telefonos celulares
+  >> radio --> radiobutton 
+
+  <label for="free">Free</label>
+  <input type="radio" id="free" name="suscripcion">
+  <label for="pago">Pago</label>
+  <input type="radio" id="pago" name="suscripcion">
+
+  Ponemos el name igual en los inputs para que no permita elegir dos y el for del label igual id de un input asi al clickear el label activa el radiobutton
+
+
+
+  >> checkbox --> caja con tilde multiple choice
+
+  <label for="rosa">Rosa</label>
+  <input id="rosa" type="checkbox" name="color1">
+  <label for="rojo">Rojo</label>
+  <input id="rojo" type="checkbox" name="color2">
+  <label for="azul">Verde</label>
+  <input id="azul" type="checkbox" name="color3">
+
+  >> select --> nos sirve para ingrear selectores, al seleccionarlo nos muestra una lista desplegable donde podemos seleccionar
+
+  <label for="country">Paises</label>
+  <select name="country" id="country">
+          <option value="ar">Argentina</option>
+          <option value="co">Colombia</option>
+          <option value="me">Mexico</option>
+          <option value="ur">Uruguay</option>
+  </select>
+
+  >> textarea --> permite escribir textos mas grandes
+  >> button --> boton que hace una accion
+      --> Button > accion
+      --> Submit > enviar
+      --> Reset > limpiar
+
+
+Validaciones --> required > Si tiene el atributo required se convierte en un campo obligatorio a completar
+             --> minlength > cantidad minima de caracteres
+             --> maxlength > cantidad maxima de caracteres
+
+Eventos
+  >> :hover --> Se activa al color el mouse por encima del elemento
+    .item:hover{
+      //estilos
+    }
+  >> :focus --> Se muestra cuando un elemento obtiene foco al hacer tab
+    .item:focus{
+      //estilos
+    }
+  >> :active --> Se muestra cuando un elemento pasa a un estado activo al presionarlo
+    .item:active{
+      //estilos
+    } 
+
+Selectores avanzados
+
+Concatenacion de id's
+
+#parrafo1,#parrafo2{
+    color: plum;
+
+}
+
+Adyacente >> a quien le continua.
+
+.parrafo + p{
+    color: plum;
+}
+
+Selector de hijos >> llamado a hijo directo
+
+.contenedor > p{
+    color:plum;
+
+}
+
+Selector de hermanos >> separa dos selectores y selecciona el segundo elemento sólo si está precedido por el primero y ambos comparten un padre común. (en el ejemplo todos p dentro de un body)
+
+#parrafo1 ~ p{
+    color:plum;
+
+}
+
+Responsive >> que nuestro html fitee en todas las pantallas
+
+Breakpoint
+  Celulares >> 320px - 480px
+  Tablets >> 480px - 1024px
+  Notebook >> 1024 - 1200px
+  Pantalla Grande >> > 1200px
+
+media-query >> definir estilos en cada breakpoint
+
+@media(max-width:1024px){
+  //estilos
+
+}
+
+.caja{
+    width: 500px;
+    height: 500px;
+    background-color: plum;
+}
+@media(max-width: 1024px){
+    .caja{
+        height: 100px;
+        width: 100px;
+    }
+}
+
+En menos de 1024px la caja va a pasar a ser de 100x100px
+
+first-mobile >> definir estilos en cada breakpoint
+
+@media(min-width: 1024px){
+  //estilos
+
+}
+
+Variables >> Sirven para guardar datos reutilizados en CSS. Es muy común definir los colores en variables
+
+:root{
+  --main-color: #ff0000;
+
+}
+.uno{
+  background-color: var(--main-color);
+  
+}
