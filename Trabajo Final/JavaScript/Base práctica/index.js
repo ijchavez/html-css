@@ -140,6 +140,7 @@ const accionModalFin = () => {
 	inicializacion();
 };
 
+
 const clickBoton = (id) => {
 	/**
 	 * Evento click de los botones del juego
