@@ -351,7 +351,20 @@
 
 }
 /*Investigue un poco en internet como hacer un read more/read less porque
-me quedaba muy ancho algun que otro bloque*/
+me quedaba muy ancho algun que otro bloque
+Se usa asi asi:
+                <input type="checkbox" class="read-more-state" id="post-'numero'" />  
+                <p>Texto previo al boton</p>
+                ***A PARTIR DE ACA TODO VA A UN BOTON MAS***
+                <ul class="read-more-wrap">
+                  <li class="read-more-target">item 1</li>
+                  <li class="read-more-target">item 2</li>
+                  <li class="read-more-target">item 3</li>
+                </ul>
+                <label for="post-'numero'" class="read-more-trigger"></label>  
+
+
+*/
 .read-more-state {
   display: none;
 }
