@@ -225,9 +225,9 @@
 .wbutt{
   border-radius: 15px;
   border: none;
-  background-color: var(--color-terciary);
-  width: 80px;
-  height: 40px;
+  background-image: linear-gradient(307deg, #50c4be, #3807e7);
+  width: 150px;
+  height: 50px;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -235,8 +235,19 @@
   margin-top: 15px;
 
 }
+.infowhoami{
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  margin-bottom: 25px;
+}
+.thisbutton{
+  display: flex;
+  flex-direction: row;
+}
 .cvbtn{
   text-decoration: none;
+  color:white;
 
 }
 /* SKILS */
@@ -779,6 +790,7 @@ Se usa asi asi:
     display: flex;
     align-items: center;
     margin-left: auto;
+    margin-right: auto;
 
 }
 .banner-container {
@@ -818,11 +830,12 @@ bottom: -30px;
   justify-content: space-between;
 
 }
+
   .socmed{
     font-size: 30px;
     color: black;
     margin-top: 25px;
-  
+    padding: 0px 0px 0 16px;
   }
 
   
@@ -836,8 +849,10 @@ bottom: -30px;
     width: 150px;
     height: 50px;
     border-radius: 10px;
-    background-color: var(--color-secondary);
+    background-color: rgb(91, 173, 135);
+    font-weight: bold;
     margin-bottom: 50px;
+    font-size: 20px;
   
   }
   .cntctbt{
@@ -851,13 +866,14 @@ bottom: -30px;
   .whoami{
     width: auto;
     height: auto;
-    margin-left: 30px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgba(100, 175, 237, 0.24);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    box-shadow: 0px 5px 20px 0px rgba(7, 37, 59, 0.486);
+    box-shadow: 0px 5px 20px 0px rgb(7 37 59 / 49%);
   
   }
   .profimg{
@@ -870,17 +886,19 @@ bottom: -30px;
     border-radius: 15px;
     border: none;
     background-color: var(--color-terciary);
-    width: auto;
-    height:auto;
-    display:flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    align-items: center;
     margin-left: auto;
+    margin-right: auto;
     margin-top: 15px;
   
   }
   .cvbtn{
     text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
   }
   .works-container {
     text-align: center;
@@ -918,6 +936,21 @@ bottom: -30px;
     font-size: 20px;
     font-weight: bolder;
       
+  }
+  .buttgames {
+    border: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: gray;
+    margin-top: 15px;
+    margin-left: auto;
+  }
+  .infowhoami {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 25px;
   }
 
 }
