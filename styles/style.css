@@ -517,9 +517,9 @@ Se usa asi asi:
 }
 .works-container__topics__card > img {
   width: 100%;
-  height: 240px;
+  height: 100%;
   border-radius: 50%;
-
+  
 }
 .game-container__topics{
   display:flex;
@@ -952,5 +952,9 @@ bottom: -30px;
     margin-left: auto;
     margin-bottom: 25px;
   }
+  .works-container__topics__card > img {
+    width: 100%;
+    height: 60%;
+    border-radius: 50%;
 
 }
