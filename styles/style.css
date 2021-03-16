@@ -210,6 +210,25 @@
   box-shadow: 0px 5px 20px 0px rgba(7, 37, 59, 0.486);
 
 }
+.whoamiskills{
+  width: 800px;
+  height: auto;
+  margin-left: 30px;
+  background-color: rgb(231, 230, 230);
+  background-image: linear-gradient(94deg, rgb(231, 230, 230), rgb(161, 159, 159));
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  padding: 35px;
+  margin: 2.00em;
+  box-shadow: 0px 5px 20px 0px darkgray;
+
+}
+.listhabilities li{
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
 .titulowhoami{
   font-size: 32px;
   padding: 60px 20px;
@@ -250,6 +269,85 @@
   color:white;
 
 }
+.skils-container__main__card__progress {
+  width: 50%;
+}
+
+.skils-container__main__card__progress__content {
+  margin-bottom: 20px;
+}
+
+.skils-container__main__card__progress__content:last-child {
+  margin-bottom: 0px;
+}
+
+.skils-container__main__card__progress__content > h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+}
+
+.skils-container__main__card__progress__content__bar {
+  height: 7px;
+  margin-bottom: 0;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  box-shadow: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.skils-container__main__card__progress__content__bar__incomplete {
+  position: absolute;
+  height: 7px;
+  border-radius: 15px;
+}
+
+.skils-container__main__card__progress__content:nth-child(1)
+  .skils-container__main__card__progress__content__bar__incomplete {
+  width: 80%;
+  background-color: orange
+}
+
+.skils-container__main__card__progress__content:nth-child(2)
+  .skils-container__main__card__progress__content__bar__incomplete {
+  width: 45%;
+  background-color: var(--color-forth);
+}
+
+.skils-container__main__card__progress__content:nth-child(3)
+  .skils-container__main__card__progress__content__bar__incomplete {
+  width: 35%;
+  background-color: var(--color-terciary);
+}
+.skils-container__main__card__progress__content:nth-child(4)
+  .skils-container__main__card__progress__content__bar__incomplete {
+  width: 30%;
+  background-color: skyblue;
+}
+
+.skils-container__main__card__progress__content:nth-child(5)
+  .skils-container__main__card__progress__content__bar__incomplete {
+  width: 40%;
+  background-color: red;
+}
+
+.skils-container__main__card__progress__content:nth-child(6)
+  .skils-container__main__card__progress__content__bar__incomplete {
+  width: 30%;
+  background-color: rgb(218, 133, 102);
+}
+.skils-container__main__card__progress__content:nth-child(7)
+  .skils-container__main__card__progress__content__bar__incomplete {
+  width: 35%;
+  background-color: greenyellow;
+}
+
+.skils-container__main__card__progress__content:nth-child(8)
+  .skils-container__main__card__progress__content__bar__incomplete {
+  width: 60%;
+  background-color: rgb(207, 18, 224)
+}
+
 /* SKILS */
 .skils-container__topics {
   display: flex;
@@ -292,6 +390,7 @@
   top: 0;
   font-size: 17px;
 }
+
 
 /*Certificaciones y cursos*/
 .tit-title{
@@ -874,6 +973,21 @@ bottom: -30px;
     align-items: center;
     padding: 20px;
     box-shadow: 0px 5px 20px 0px rgb(7 37 59 / 49%);
+  
+  }
+  .whoamiskills{
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(231, 230, 230);
+    background-image: linear-gradient(94deg, rgb(231, 230, 230), rgb(161, 159, 159));
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 35px;
+    margin: 2.00em;
+    box-shadow: 0px 5px 20px 0px darkgray;
   
   }
   .profimg{
