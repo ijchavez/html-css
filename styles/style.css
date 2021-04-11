@@ -215,7 +215,7 @@
   height: auto;
   margin-left: 30px;
   background-color: rgb(231, 230, 230);
-  background-image: linear-gradient(94deg, rgb(231, 230, 230), rgb(161, 159, 159));
+  background-image: linear-gradient(179deg, rgb(231, 230, 230), rgb(161, 159, 159));
   display: flex;
   flex-direction:column;
   align-items: center;
@@ -233,6 +233,19 @@
   font-size: 32px;
   padding: 60px 20px;
   margin: auto;
+
+}
+.profile{
+  width: 800px;
+  height: auto;
+  margin-left: 30px;
+  background-image: linear-gradient(179deg, rgba(100, 175, 237, 0.24), rgb(231, 230, 230));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 60px;
+  margin: 40px;
+  box-shadow: 0px 5px 20px 0px rgba(7, 37, 59, 0.486);
 
 }
 .profimg{
@@ -390,7 +403,11 @@
   top: 0;
   font-size: 17px;
 }
+.englist{
+  font-size: 22px;
+  font-weight: bold;
 
+}
 
 /*Certificaciones y cursos*/
 .tit-title{
@@ -732,9 +749,8 @@ Se usa asi asi:
 /* RESPONSIVE */
 @media (max-width: 1000px) {
   * {
-    box-sizing: border-box;
-    font-family: 'Mulish', sans-serif;
     font-size: 16px;
+
   }
   .container {
     max-width: initial;
@@ -882,11 +898,6 @@ Se usa asi asi:
   
   }
   .enviar_button {
-    border-radius: 5px;
-    border: none;
-    width: auto;
-    height: auto;
-    display: flex;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
@@ -897,43 +908,30 @@ Se usa asi asi:
 }
 
 .banner-main{
-  display: flex;
   flex-direction: column;
-  position: relative;
   margin-bottom: 110px;
   align-items: center;
 
 }
 .banner-container__scroll{
-position: absolute;
-bottom: -30px;
+  position: absolute;
+  bottom: -30px;
 
 }
 
 .avatar{
   width: 200px;
   height: 200px;
-  background-image: url(../imagenes/my-octocat-1609338970774.png);
-  background-size: cover;
-  position: relative;
   margin-top: 40px;
    
 }
-.avatar:hover{
-  background-image: url("../imagenes/my-octocat-1609698871425.png");
 
-}
 .banner-socmed{
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
 
 }
 
   .socmed{
-    font-size: 30px;
-    color: black;
-    margin-top: 25px;
     padding: 0px 0px 0 16px;
   }
 
@@ -944,19 +942,11 @@ bottom: -30px;
     
   }
   .butt{
-    border:none;
-    width: 150px;
-    height: 50px;
-    border-radius: 10px;
     background-color: rgb(91, 173, 135);
     font-weight: bold;
     margin-bottom: 50px;
     font-size: 20px;
   
-  }
-  .cntctbt{
-    text-decoration: none;
-    color: var(--color-primary);
   }
   .banner-det {
     margin-top: 20px;
@@ -964,15 +954,12 @@ bottom: -30px;
   }
   .whoami{
     width: auto;
-    height: auto;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(100, 175, 237, 0.24);
-    display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 20px;
     box-shadow: 0px 5px 20px 0px rgb(7 37 59 / 49%);
+    margin:0;
   
   }
   .whoamiskills{
@@ -980,14 +967,16 @@ bottom: -30px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(231, 230, 230);
-    background-image: linear-gradient(94deg, rgb(231, 230, 230), rgb(161, 159, 159));
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    padding: 35px;
-    margin: 2.00em;
-    box-shadow: 0px 5px 20px 0px darkgray;
+    margin: 0;
+  
+  }
+  .profile{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
   
   }
   .profimg{
@@ -997,16 +986,9 @@ bottom: -30px;
     background-size: cover;
   }
   .wbutt{
-    border-radius: 15px;
-    border: none;
-    background-color: var(--color-terciary);
     width: 90px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
     margin-right: auto;
-    margin-top: 15px;
   
   }
   .cvbtn{
@@ -1024,47 +1006,19 @@ bottom: -30px;
   .works-container__topics__card{
     width: 100%;
     padding: 30px;
-    border-radius: 20px;
-    margin:0;
-    color: var(--color-font);
-    background-color: white;
-    box-shadow: 0px 5px 20px 0px var(--color-shadow);
-    text-align: center;
-    background-color: white;
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 0;
+
   }
-  .works-container__topics__card__mask {
-    position: absolute;
-    background: rgba(0, 128, 0, 0.651);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    display: flex;
-    padding: 50px 0px 0px 30px;
-    box-sizing: border-box;
-    color: var(--color-primary);
-    font-size: 20px;
-    font-weight: bolder;
-      
-  }
+  
+
   .buttgames {
-    border: none;
-    width: 150px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: gray;
     margin-top: 15px;
     margin-left: auto;
+
   }
   .infowhoami {
-    display: flex;
-    align-items: center;
     margin-left: auto;
-    margin-bottom: 25px;
+
   }
   .works-container__topics__card > img {
     width: 100%;
