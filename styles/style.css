@@ -48,7 +48,7 @@
  
   
 }
-.avatar:hover{
+.avatar-animado{
   background-image: url("../imagenes/my-octocat-1609698871425.png");
 
 }
@@ -91,6 +91,33 @@
   font-style: bold;
 
   
+}
+#reloj{
+  font-family: sans-serif;
+  font-size: 60px;
+  text-shadow: 0px 0px 1px rgb(142, 252, 246);
+  color: rgb(18, 20, 129);
+
+}
+.reloj-contenedor{
+  background-color: rgb(212, 239, 247);
+  padding: 25px;
+  max-width: 350px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 10%;
+  
+}
+#fecha{
+  letter-spacing: 10px;
+  font-size : 15px;
+  
+}
+.relojfooter{
+  display: flex;
+  align-items: flex-end;
+  margin-top: 380px;
 }
 .titulo{
   font-size: 32px;
