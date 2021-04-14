@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body onload='animarAvatar()'>
   <div class="main-container">
 
     <section class="navbar-container__desktop">
@@ -42,6 +42,12 @@
         <img class="menuimg" src="./imagenes/Logos/contactme.png" alt="contactme">
         Contactame
       </a>
+      <div class ='relojfooter'id='reloj'>
+        <div class='reloj-contenedor' id='contenedor'>
+            <div id='hora'></div>
+            <div id='fecha'></div>
+        </div>
+    </div>
     </section>
 
     <div class="full-container">
@@ -98,7 +104,7 @@
         <div class="background-image"></div>
 
         <div class="banner-main">
-          <div class="avatar"></div>
+          <div id='avatar'class="avatar"></div>
 
           <div class="banner-det">
             <h2 class="titulo">Gerardo Chavez</h2>
@@ -592,10 +598,31 @@
             <ul>
                 <li>
                     Actividad Final Integradora &#10142;
-                    <a class="certif-links"href="https://ejercicio1cursohtml.000webhostapp.com/sistemasolar.html" target="_blank">
+                    <a class="certif-links"href="https://ejercicio1cursohtml.000webhostapp.com/Unidad%206/Ejercicio6/sistemasolar.html" target="_blank">
                         <i class="far fa-file-code"></i>
                     </a>
+                    <br/>
+                    <input type="checkbox" class="read-more-state" id="post-5" />
+                    <ul class="read-more-wrap">
+                      <li class="read-more-target">
+                        La Tierra &#10142;
+                        <a class="certif-links"href="https://ejercicio1cursohtml.000webhostapp.com/Unidad%206/Ejercicio6/tierra.html" target="_blank">
+                          <i class="far fa-file-code"></i>
+                        </a>
+                      </li>
+                      <li class="read-more-target">
+                        Transporte &#10142;
+                        <a class="certif-links"href="https://ejercicio1cursohtml.000webhostapp.com/Unidad%206/Ejercicio6/transporte.html" target="_blank">
+                          <i class="far fa-file-code"></i>
+                        </a>
+                      </li>
+
+                    </ul>
+                    <label for="post-5" class="read-more-trigger"></label>
                 </li>
+              </ul>
+              <br/>
+              <ul>
                 <li>Registro de dominio y Tecnologías de Internet</li>
                 <li>Introducción a HTML</li>
                 <li>Introducción a CSS (estilos en cascada)</li>
@@ -806,7 +833,8 @@
     </div>
 
   </div>
-
+  <script src="./js/reloj.js"></script>
+  <script src="./js/animarImagen.js"></script>
   <script src="https://kit.fontawesome.com/7aa36192fa.js" crossorigin="anonymous"></script>
 </body>
 
