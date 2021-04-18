@@ -66,7 +66,10 @@ const activarElemento = (elementoDOM) => {
   const obtenerElementoDom = (id) => {
 	return window.document.getElementById(id);
   };
+  function seteoAtributos(elemento, atributo, valor){
+	  elemento.setAttribute(atributo, valor);
 
+  }
   //Visto de la referencia
   
   const activarInteracciones = () => {
@@ -125,8 +128,18 @@ const accionModalInicio = () => {
 	  
 	  inicializacion();
 	}else{
-		const MuestroPopUP = obtenerElementoDom("pop_up");
-		//console.log(MuestroPopUP);
+		const MuestroPopUP = obtenerElementoDom("popup");
+		MuestroPopUP.innerHTML = `
+		<div id="popupBody">
+			<h2>Error </h2>
+			<a id="cerrar" href="#">&times;</a>
+			<div class="popupContent">
+				<p>Completa tu nombre</p>
+			</div>
+		</div>
+		`;
+		const alink = obtenerElementoDom('pop_up');
+		seteoAtributos(alink,'href','#popup');
 		return;
 	}
   };
@@ -264,7 +277,18 @@ const reseteoVariables = () =>{
 	estadoJuego.nivelUsuario = 0;
 
 }
+function loseMenuPrincipal(){
+	const menuPrincipal = obtenerElementoDom("menuppal");
+	seteoAtributos(menuPrincipal,'href','index.html#');
+	const inicio = obtenerElementoDom("pop_up");
+	seteoAtributos(inicio,"href","#");
 
+	window.location.replace("index.html");
+	const nombreInicial = document.getElementById("nombre_jugador");
+	nombreInicial.value = '';
+	localStorage.clear();
+
+}
 const inicializacion = () => {
 	/**
 	 * Función de inicialización del juego 
